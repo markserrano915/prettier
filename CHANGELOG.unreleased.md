@@ -84,3 +84,62 @@ Examples:
   // Output (Prettier master)
   <my-element data-for={value}></my-element>
   ```
+
+- JavaScript: Respect newlines between parameters ([#5260] by [@evilebottnawi])
+
+  <!-- prettier-ignore -->
+  ```js
+  // Input
+  function foo(
+    one,
+  
+    two,
+    three,
+    four,
+  
+  
+    five,
+    six,
+    seven,
+    eight,
+    nine,
+    ten,
+  
+    eleven
+  
+  ) {}
+    
+  // Output (Prettier stable)
+  function foo(
+    one,
+    two,
+    three,
+    four,
+    five,
+    six,
+    seven,
+    eight,
+    nine,
+    ten,
+    eleven
+  ) {}
+    
+  // Output (Prettier master)
+  function foo(
+    one,
+  
+    two,
+    three,
+    four,
+  
+  
+    five,
+    six,
+    seven,
+    eight,
+    nine,
+    ten,
+  
+    eleven
+  ) {}
+  ```
